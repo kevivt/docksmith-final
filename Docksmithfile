@@ -1,0 +1,6 @@
+FROM alpine:latest
+WORKDIR /app
+ENV GREETING=Hello
+COPY script.sh /app/script.sh
+RUN chmod +x /app/script.sh
+CMD ["/bin/sh", "/app/script.sh"]
